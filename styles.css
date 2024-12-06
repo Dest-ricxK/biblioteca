@@ -231,7 +231,7 @@ header p {
 
 @media screen and (max-whidth:750px){
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .book footer button {
@@ -242,7 +242,7 @@ header p {
 
 @media screen and (max-whidth: 480px), (max-height: 780px ){
     html {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .book footer button {
