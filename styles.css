@@ -230,10 +230,6 @@ header p {
 }
 
 @media screen and (max-whidth:750px){
-    html {
-        font-size: 12px;
-    }
-
     .book footer button {
         margin-top: -93vh;
         margin-right: -16vh;
@@ -241,10 +237,6 @@ header p {
 }
 
 @media screen and (max-whidth: 480px), (max-height: 780px ){
-    html {
-        font-size: 12px;
-    }
-
     .book footer button {
         margin-top: -80vh;
         margin-right: -20vh;
