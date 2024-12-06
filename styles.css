@@ -137,7 +137,6 @@ header p {
     place-items: center; 
     margin-top: 20px;
     background-color: #578b76;
-    border: 1px solid #ffffff;
 }
 
 #favoritesList {
@@ -227,4 +226,11 @@ header p {
     display: grid;
     place-items: center; 
     height: 100px;
+}
+
+@media screen and (max-height: 760px){
+    .book footer button {
+        margin-top: -82vh;
+        margin-right: -17vh;
+    }
 }
