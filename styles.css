@@ -231,17 +231,22 @@ header p {
 
 @media screen and (max-whidth:750px){
     html {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-whidth:580px){
-    html {
         font-size: 10px;
     }
 
     .book footer button {
-        margin-top: -100vh;
-        margin-right: -19vh;
+        margin-top: -93vh;
+        margin-right: -16vh;
+    }
+}
+
+@media screen and (max-whidth: 480px), (max-height: 780px ){
+    html {
+        font-size: 8px;
+    }
+
+    .book footer button {
+        margin-top: -80vh;
+        margin-right: -20vh;
     }
 }
