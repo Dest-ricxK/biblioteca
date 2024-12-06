@@ -8,34 +8,40 @@ document.addEventListener('DOMContentLoaded', () => {
         const bookId = bookElement.id; // Usamos el ID del libro para identificarlo de forma única
         const bookAuthor = bookElement.querySelector('.description').innerText.split(": ")[1];
         
-        // Crear un nuevo elemento de lista con el título del libro
-        const listItem = document.createElement('li');
-        listItem.innerText = `${bookTitle} - ${bookAuthor}`;
-
-        // Agregarlo a la lista de favoritos
-        favoritesList.appendChild(listItem);
-
-        // Crear el botón de eliminar
-        const removeButton = document.createElement('button');
-        removeButton.innerText = "🗑";
-        removeButton.classList.add('remove-btn');
-        removeButton.addEventListener('click', () => {
-            listItem.remove(); // Elimina el libro de la lista de favoritos
-        });
-        // Agregar el botón de eliminar al elemento de la lista
-        listItem.appendChild(removeButton);
-        
-
+        // Verificar si el libro ya está en la lista de favoritos
         const existingBooks = Array.from(favoritesList.children);
         const isAlreadyFavorite = existingBooks.some(item => item.innerText.includes(bookTitle));
+
+        // Si el libro ya está en favoritos, deshabilitar el botón
+        const favoriteButton = bookElement.querySelector('.favorite-btn');
         if (isAlreadyFavorite) {
-            const favoriteButton = bookElement.querySelector('.favorite-btn');
-            favoriteButton.disabled = false; // Deshabilitar el botón
-            favoriteButton.innerText = '★';
+            favoriteButton.disabled = true;
+            favoriteButton.innerText = '☆'; 
         } else {
-            const favoriteButton = bookElement.querySelector('.favorite-btn');
-            favoriteButton.disabled = true; // Deshabilitar el botón
-            favoriteButton.innerText = '★'; // La estrella no cambiará de aspecto
+            favoriteButton.disabled = false;
+            favoriteButton.innerText = '★'; 
+        }
+
+        // Si el libro no está en favoritos, agregarlo
+        if (!isAlreadyFavorite) {
+            // Crear un nuevo elemento de lista con el título del libro
+            const listItem = document.createElement('li');
+            listItem.innerText = `${bookTitle} - ${bookAuthor}`;
+
+            // Agregarlo a la lista de favoritos
+            favoritesList.appendChild(listItem);
+
+            // Crear el botón de eliminar
+            const removeButton = document.createElement('button');
+            removeButton.innerText = "🗑";
+            removeButton.classList.add('remove-btn');
+            removeButton.addEventListener('click', () => {
+                listItem.remove(); // Elimina el libro de la lista de favoritos
+                favoriteButton.disabled = false; // Habilitar el botón de favorito nuevamente
+                favoriteButton.innerText = '☆'; // Cambiar el texto del botón
+            });
+            // Agregar el botón de eliminar al elemento de la lista
+            listItem.appendChild(removeButton);
         }
     }
 
@@ -47,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Función para alternar la visibilidad de la lista de favoritos
     favoritesToggle.addEventListener('click', (event) => {
         event.preventDefault(); // Evitar que el enlace haga su comportamiento predeterminado
         const isVisible = favoritesContainer.style.display === 'block';
