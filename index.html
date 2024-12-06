@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiYellow</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Tú Biblioteca Personal</h1>
+            <p>Una recopilacion de los libros que creo que te pueden gustar.</p>
+        
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#" id="favoritesToggle">Libros Favoritos</a></li> <!-- Cambio aquí: ID para el enlace -->
+                    <li><a href="#" id="darkModeToggle">Modo Oscuro</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <div class="favorites-container" id="favoritesContainer" style="display: none;">
+            <h2>Libros Favoritos</h2>
+            <ul id="favoritesList">
+                <!-- Los favoritos se agregarán aquí -->
+            </ul>
+        </div>
+
+        <div class="books-container">
+            <div class="book">
+                <img src="CNR.png" alt="Portada del libro 1">
+                <h3>Cuentos de buenas noches para niñas rebeldes</h3>
+                <p class="description">AUTOR: Elena Favilli y Francesca Cavallo</p>
+                <p class="description">GENERO: Superación, inspiración.</p>
+                <p class="description">SINOPSIS: Este libro de relatos es una recopilación de historias inspiradoras sobre mujeres de todo el mundo que lograron grandes cosas, a pesar de las adversidades. Cada historia es una lección sobre superación y resistencia.
+                </p>
+                <div>
+                <footer>
+                    <a href="Cuentos de buenas noches para niñas rebeldes (Spanish Edition).pdf" download>Descargar</a>
+                </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book">
+                <img src="pqc.png" alt="Portada del libro 2">
+                <h3>Pequeñas cosas bellas</h3>
+                <p class="description">AUTOR: Cheryl Strayed</p>
+                <p class="description">GENERO: Psicología emocional, superación</p>
+                <p class="description">SINOPSIS: Es una colección de cartas y respuestas del popular sitio web Dear Sugar, escrito por Cheryl Strayed, quien aborda temas sobre la vida, el amor, el dolor y las decisiones difíciles. A través de sus respuestas, la autora brinda consejos para superar obstáculos emocionales y psicológicos.</p>
+                <div>
+                    <footer>
+                        <a href="Pequeñas cosas bellas.epub" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book">
+                <img src="apv.png" alt="Portada del libro 3">
+                <h3>La probabilidad del amor a primera vista</h3>
+                <p class="description">AUTOR: Jennifer E. Smith</p>
+                <p class="description">GENERO: Romance juvenil</p>
+                <p class="description">SINOPSIS: Hadley, una joven de 17 años, se encuentra con Oliver en un aeropuerto antes de un vuelo que cambiará su vida. Juntos viven una conexión instantánea, mientras enfrentan sus propios miedos y emociones, explorando el amor inesperado en medio de circunstancias complicadas.</p>
+                <div>
+                    <footer>
+                        <a href="La probabilidad estadística del amor a primera vista.epub" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book">
+                <img src="ac.png" alt="Portada del libro 1">
+                <h3>Como agua para chocolate</h3>
+                <p class="description">AUTOR: Laura Esquivel</p>
+                <p class="description">GENERO: Romance, realismo mágico</p>
+                <p class="description">SINOPSIS: Tita, la hija menor de una familia tradicional, se enamora de Pedro, pero debe renunciar a su amor debido a una antigua tradición. A través de la cocina, Tita expresa sus emociones y desvela un amor prohibido con efectos mágicos en quienes la rodean.</p>
+                <div>
+                    <footer>
+                        <a href="Como agua para chocolate.epub" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book" id="book1">
+                <img src="sv.png" alt="Portada del libro 1">
+                <h3>La sombra del viento</h3>
+                <p class="description">AUTOR: Carlos Ruiz Zafón</p>
+                <p class="description">GENERO: Romance, misterio, superación</p>
+                <p class="description">SINOPSIS: Un joven llamado Daniel descubre un libro en una misteriosa librería y se ve envuelto en una trama de secretos familiares, amor y literatura. La novela aborda el poder de los libros y las emociones humanas, y también reflexiona sobre cómo el pasado influye en nuestra vida.</p>
+                <div>
+                    <footer>
+                        <a href="La Sombra del Viento.pdf" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book">
+                <img src="m.png" alt="Portada del libro 1">
+                <h3>La metamorfosis</h3>
+                <p class="description">AUTOR: Franz Kafka</p>
+                <p class="description">GENERO: Existencialista, realismo y fantasía</p>
+                <p class="description">SINOPSIS: La obra más conocida de Kafka, donde Gregor Samsa, un hombre común, se despierta convertido en un insecto gigante. La novela es un profundo análisis de la alienación, la angustia existencial y el aislamiento social.</p>
+                <div>
+                    <footer>
+                        <a href="La Metamorfosis.epub" download>Descargar</a>
+                    </footer>
+                    <button class="favorite-btn">&#9733;</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="api.png" alt="Portada del libro 1">
+                <h3>El amor es un perro infernal</h3>
+                <p class="description">AUTOR: Charles Bukowski</p>
+                <p class="description">GENERO: Realismo sucio</p>
+                <p class="description">SINOPSIS: Nos cuenta la vida de Henry Chinaski, mientras lidia con el amor, el sexo, el alcoholismo y la soledad. A través de su mirada cruda y desencantada, presentando a el amor como un sentimiento caótico y destructivo, lleno de pasiones y frustraciones.</p>
+                <div>
+                    <footer>
+                        <a href="El amor es un perro infernal.epub" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book">
+                <img src="lm.png" alt="Portada del libro 1">
+                <h3>La máquina de follar</h3>
+                <p class="description">AUTOR: Charles Bukowski</p>
+                <p class="description">GENERO: Realismo sucio y literatura erótica</p>
+                <p class="description">SINOPSIS: Esta novela sigue a Henry Chinaski, el alter ego del autor, en su vida de excesos, sexo y alcohol. A través de su mirada desilusionada, Bukowski explora la alienación, las relaciones superficiales y el vacío existencial de un hombre atrapado en una espiral de autodestrucción.</p>
+                <div>
+                    <footer>
+                        <a href="La máquina de follar.epub" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+            <div class="book">
+                <img src="eanv.png" alt="Portada del libro 1">
+                <h3>¡En agosto nos vemos!</h3>
+                <p class="description">AUTOR: Gabriel Garcias Marquéz</p>
+                <p class="description">GENERO: Ficcion</p>
+                <p class="description">SINOPSIS: Cada mes de agosto Ana Magdalena Bach toma el transbordador hasta la isla donde está enterrada su madre para visitar la tumba en la que yace. Esas visitas acaban suponiendo una irresistible invitación a convertirse en una persona distinta durante una noche al año.</p>
+                <div>
+                    <footer>
+                        <a href="¡En agosto nos vemos!.epub" download>Descargar</a>
+                    </footer>
+                </div>
+                <button class="favorite-btn">&#9733;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie">
+        <p>BiYellow | Todos los derechos de autor reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

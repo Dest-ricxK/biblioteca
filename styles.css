@@ -1,0 +1,225 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+header {
+    background-color: #578b76;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.menu {
+    background-color: #578b76;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.book {
+    background-color: #76b49c;
+    width: 380px;
+    height: 640px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+.book img {
+    height: 240PX;
+    width: 140px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-align: justify;
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.book a {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.book a:hover {
+    background-color: #555;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ffcc00; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.favorite-btn:hover {
+    color: #ff9900; 
+}
+
+.favorites-container {
+    display: grid;
+    place-items: center; 
+    margin-top: 20px;
+    background-color: #578b76;
+    border: 1px solid #ffffff;
+}
+
+#favoritesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#favoritesList li {
+    margin-bottom: 10px;
+}
+
+.remove-btn {
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.book footer {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Mostrar el footer (botones de descarga) cuando el ratón está sobre el libro */
+.book:hover footer {
+    display: block;
+}
+
+/* Opcional: Efecto visual para el hover en el libro */
+.book:hover {
+    transform: scale(1.05);
+}
+
+.pie {
+    display: grid;
+    place-items: center; 
+    height: 100px;
+}
