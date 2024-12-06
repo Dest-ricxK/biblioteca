@@ -229,7 +229,7 @@ header p {
     height: 100px;
 }
 
-@media screen {
+@media screen and (max-whidth:600px){
     .book footer button{
         margin-top: -87vh;
         margin-right: -19vh;
