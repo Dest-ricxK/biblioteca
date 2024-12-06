@@ -208,6 +208,11 @@ header p {
     transform: translateX(-50%);
 }
 
+.book footer button {
+    margin-top: -65vh;
+    margin-right: -13vh;
+}
+
 /* Mostrar el footer (botones de descarga) cuando el ratón está sobre el libro */
 .book:hover footer {
     display: block;
@@ -222,4 +227,11 @@ header p {
     display: grid;
     place-items: center; 
     height: 100px;
+}
+
+@media screen {
+    .book footer button{
+        margin-top: -87vh;
+        margin-right: -19vh;
+    }
 }
