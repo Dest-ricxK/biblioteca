@@ -209,8 +209,8 @@ header p {
 }
 
 .book footer button {
-    margin-top: -65vh;
-    margin-right: -13vh;
+    margin-top: -87vh;
+    margin-right: -19vh;
 }
 
 /* Mostrar el footer (botones de descarga) cuando el ratón está sobre el libro */
@@ -229,9 +229,19 @@ header p {
     height: 100px;
 }
 
-@media screen and (max-whidth:600px){
-    .book footer button{
-        margin-top: -87vh;
+@media screen and (max-whidth:750px){
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-whidth:580px){
+    html {
+        font-size: 10px;
+    }
+
+    .book footer button {
+        margin-top: -100vh;
         margin-right: -19vh;
     }
 }
