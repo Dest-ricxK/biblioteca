@@ -66,28 +66,31 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 const moonIcon = document.getElementById('moonIcon');
 const sunIcon = document.getElementById('sunIcon');
 const modeText = document.getElementById('modeText');
-const headers = document.getElementById('headers')
+const headers = document.getElementById('headers');
+const footer = document.getElementById('pie');
 
 // Función para alternar entre modos
 const toggleDarkMode = () => {
+    // Alternar entre el modo oscuro y claro en el body
     document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('header');
     
     // Ajustar íconos y texto
     if (document.body.classList.contains('dark-mode')) {
         moonIcon.style.display = 'inline';
         sunIcon.style.display = 'none';
         modeText.textContent = 'Modo Oscuro';
+        
+        // Cambiar color de los encabezados y pie de página cuando esté en modo oscuro
+        headers.style.color = '#ffffff';
+        footer.style.color = 'rgb(7, 6, 6)';
     } else {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'inline';
         modeText.textContent = 'Modo Claro';
-    }
-
-    if (document.body.classList.contains('header')) {
-        headers.style.color = '#ffffff';
-    } else {
-        headers.style.color = ' rgb(7, 6, 6)';
+        
+        // Cambiar color de los encabezados y pie de página cuando esté en modo claro
+        headers.style.color = 'rgb(7, 6, 6)';
+        footer.style.color = '#ffffff';
     }
 };
 
