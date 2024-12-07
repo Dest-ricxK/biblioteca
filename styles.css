@@ -8,7 +8,7 @@
 /* General */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #080707;
     color: #000000;
     line-height: 1.6;
     margin: 0;
@@ -17,14 +17,23 @@ body {
 
 /* Estilo de modo oscuro */
 body.dark-mode {
-    background-color: #333;
-    color: white;
+    background-color: #ffffff;
+
+}
+
+body.dark-mode #moonIcon {
+    display: inline;
+    padding: 1px;
+}
+
+body.dark-mode #sunIcon {
+    display: none;
 }
 
 /* Encabezado */
 header {
     background-color: #578b76;
-    color: white;
+    color: rgb(7, 6, 6);
     padding: 20px;
     text-align: center;
 }
@@ -58,8 +67,12 @@ header p {
 
 .menu a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-size: 1.2em;
+}
+
+.style{
+    color: #080707;
 }
 
 /* Contenedor de libros */
@@ -146,6 +159,7 @@ header p {
     place-items: center;
     margin-top: 20px;
     background-color: #578b76;
+    color: #ffffff;
 }
 
 #favoritesList {
@@ -203,7 +217,7 @@ header p {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
 }
@@ -221,41 +235,11 @@ header p {
     display: block;
 }
 
-.book footer button {
-    margin-top: -88vh;
-    margin-right: -19vh;
-}
-
 /* Pie de página */
 .pie {
     display: grid;
     place-items: center;
     height: 100px;
-}
-
-/* Ajustes para dispositivos pequeños */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    .book {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .book img {
-        width: 120px;
-    }
-
-    .book footer button {
-        margin-top: -600px;
-        margin-right: -14vh;
-    }
 }
 
 /* Ajustes para pantallas táctiles */
