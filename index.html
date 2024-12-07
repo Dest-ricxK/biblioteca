@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiYellow</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="book-open-regular-24.png">
     <link rel="stylesheet" href="styles.css">
     
 </head>
-<body>
+<body id="body">
     <div class="content">
-        <header>
+        <header id="headers">
             <h1>Tú Biblioteca Personal</h1>
             <p>Una recopilacion de los libros que creo que te pueden gustar.</p>
         
             <div class="menu" id="menu">
                 <ul>
-                    <li><a href="#" id="favoritesToggle">Libros Favoritos</a></li> <!-- Cambio aquí: ID para el enlace -->
-                    <li><a href="#" id="darkModeToggle">Modo Oscuro</a></li>
+                    <li>
+                        <a href="#" id="favoritesToggle">
+                            <i class='bx bxs-bookmark-heart'></i>
+                            Libros Favoritos
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" id="darkModeToggle">
+                            <i class='bx bxs-sun' id="sunIcon" style='color:#ffffff;'></i> 
+                            <i class='bx bxs-moon' id="moonIcon" style='color:#000000; display:none;'></i>
+                            <span id="modeText">Modo Claro</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -30,6 +43,7 @@
 
         <div class="books-container">
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="CNR.png" alt="Portada del libro 1">
                 <h3>Cuentos de buenas noches para niñas rebeldes</h3>
                 <p class="description">AUTOR: Elena Favilli y Francesca Cavallo</p>
@@ -39,11 +53,11 @@
                 <div>
                 <footer>
                     <a href="Cuentos de buenas noches para niñas rebeldes (Spanish Edition).pdf" download>Descargar</a>
-                    <button class="favorite-btn">&#9734;</button>
                 </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>                        
                 <img src="pqc.png" alt="Portada del libro 2">
                 <h3>Pequeñas cosas bellas</h3>
                 <p class="description">AUTOR: Cheryl Strayed</p>
@@ -52,11 +66,11 @@
                 <div>
                     <footer>
                         <a href="Pequeñas cosas bellas.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>                        
                     </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="apv.png" alt="Portada del libro 3">
                 <h3>La probabilidad del amor a primera vista</h3>
                 <p class="description">AUTOR: Jennifer E. Smith</p>
@@ -65,11 +79,11 @@
                 <div>
                     <footer>
                         <a href="La probabilidad estadística del amor a primera vista.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="ac.png" alt="Portada del libro 1">
                 <h3>Como agua para chocolate</h3>
                 <p class="description">AUTOR: Laura Esquivel</p>
@@ -78,11 +92,11 @@
                 <div>
                     <footer>
                         <a href="Como agua para chocolate.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
             <div class="book" id="book1">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="sv.png" alt="Portada del libro 1">
                 <h3>La sombra del viento</h3>
                 <p class="description">AUTOR: Carlos Ruiz Zafón</p>
@@ -91,11 +105,11 @@
                 <div>
                     <footer>
                         <a href="La Sombra del Viento.pdf" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="m.png" alt="Portada del libro 1">
                 <h3>La metamorfosis</h3>
                 <p class="description">AUTOR: Franz Kafka</p>
@@ -104,11 +118,11 @@
                 <div>
                     <footer>
                         <a href="La Metamorfosis.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="api.png" alt="Portada del libro 1">
                 <h3>El amor es un perro infernal</h3>
                 <p class="description">AUTOR: Charles Bukowski</p>
@@ -117,11 +131,11 @@
                 <div>
                     <footer>
                         <a href="El amor es un perro infernal.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="lm.png" alt="Portada del libro 1">
                 <h3>La máquina de follar</h3>
                 <p class="description">AUTOR: Charles Bukowski</p>
@@ -130,11 +144,11 @@
                 <div>
                     <footer>
                         <a href="La máquina de follar.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
             <div class="book">
+                <button class="favorite-btn">&#9734;</button>
                 <img src="eanv.png" alt="Portada del libro 1">
                 <h3>¡En agosto nos vemos!</h3>
                 <p class="description">AUTOR: Gabriel Garcias Marquéz</p>
@@ -143,7 +157,6 @@
                 <div>
                     <footer>
                         <a href="¡En agosto nos vemos!.epub" download>Descargar</a>
-                        <button class="favorite-btn">&#9734;</button>
                     </footer>
                 </div>
             </div>
