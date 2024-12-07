@@ -61,16 +61,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Modo oscuro
+// Selección de elementos
 const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('click', () => {
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+const modeText = document.getElementById('modeText');
+const headers = document.getElementById('headers')
+
+// Función para alternar entre modos
+const toggleDarkMode = () => {
     document.body.classList.toggle('dark-mode');
-    // Guardar el estado del modo oscuro en el localStorage
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode);
+    document.body.classList.toggle('header');
+    
+    // Ajustar íconos y texto
+    if (document.body.classList.contains('dark-mode')) {
+        moonIcon.style.display = 'inline';
+        sunIcon.style.display = 'none';
+        modeText.textContent = 'Modo Oscuro';
+    } else {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'inline';
+        modeText.textContent = 'Modo Claro';
+    }
+
+    if (document.body.classList.contains('header')) {
+        headers.style.color = '#ffffff';
+    } else {
+        headers.style.color = ' rgb(7, 6, 6)';
+    }
+};
+
+// Evento de clic para activar/desactivar modo oscuro
+darkModeToggle.addEventListener('click', (event) => {
+    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    toggleDarkMode();
 });
 
-// Al cargar la página, configurar el modo oscuro si está guardado en localStorage
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
+// Evento adicional en el texto del modo
+modeText.addEventListener('click', () => {
+    modeText.classList.toggle('style'); 
+});
